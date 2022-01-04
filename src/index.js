@@ -1,7 +1,8 @@
 // TODO: Include packages needed for this application
 const fs = require('fs')
 const inquirer = require('inquirer')
-const generate = require('./utils/generateMarkdown')
+const MarkDown = require('./utils/MarkDown')
+
 // TODO: Create an array of questions for user input
 var questions = [
   {
@@ -64,7 +65,7 @@ async function runQuery() {
 // A function to write README file
 async function writeToFile() {
   const answers = await runQuery()
-  const markdown = generate.generateMarkdown(answers)
+  const markdown = MarkDown.generateMarkdown(answers)
   fs.writeFile('README.md', markdown, function (err) {
     if (err) {
       console.log("Couldn'nt save content to file")
