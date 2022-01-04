@@ -31,37 +31,37 @@ class MarkDown {
   // TODO: Create a function to generate markdown for README
   static generateMarkdown(data) {
     return `
-    # ${data.title}
+  # ${data.title}
 
-    ${this.renderLicenseBadge(data.license)}
+  ${this.renderLicenseBadge(data.license)}
 
-    ### Table of contents
-    - [Project description](#Description)
-    - [Usage](#Usage)
-    - [Contributing](#Contributing)
-    - [Installation](#Installation)
-    - [Questions](#Questions)
-    - [License](#License)
+  ### Table of contents
+  - [Project description](#Description)
+  - [Usage](#Usage)
+  - [Contributing](#Contributing)
+  - [Installation](#Installation)
+  - [Questions](#Questions)
+  - [License](#License)
 
-    ## Description
-    ### ${data.description}
+  ## Description
+  ### ${data.description}
 
-    ## Usage
-    ${data.usage}
+  ## Usage
+  ${data.usage}
 
-    ## Installation
-    ${data.installation}
+  ## Installation
+  ${data.installation}
 
-    ## Contributing
-    ${data.contributing}
+  ## Contributing
+  ${data.contributing}
 
-    ## Questions
-    ${data.email}
-    ${data.github}
+  ## Questions
+  ${data.email}
+  ${data.github}
 
-    ## License
-    ${this.renderLicenseSection(data.license)}
-    `;
+  ## License
+  ${this.renderLicenseSection(data.license)}
+  `;
   }
 }
 
